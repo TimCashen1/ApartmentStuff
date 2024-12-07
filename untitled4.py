@@ -12,22 +12,6 @@ import pandas as pd
 import numpy as np
 
 time=np.array(["September","October","November","December","January","February","March","April","May","June","July","August"])
-total_cost=np.array([83.98,88.53,95.88,86.21000000000001,102.27000000000001,93.25999999999999,147.73,183.69,137.74,53.769999999999996,66.09,54.19])
-
-plt.figure(figsize=(10,5))
-plt.plot(time,total_cost,'-', linewidth=2, markersize=10,label='Total Cost')
-plt.xlabel('Months')
-plt.ylabel('Price ($)')
-plt.title('Total Utility Costs')
-plt.legend()
-
-plt.show()
-
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
-
-time=np.array(["September","October","November","December","January","February","March","April","May","June","July","August"])
 water_cost=np.array([47.89,50.86,52.51,48.1,55.39,56.03,85.07,103.49,96.23,37.05,40.30,34.75])
 sewer_cost=np.array([36.09,37.67,43.37,38.11,46.88,37.23,62.66,80.2,41.51,16.72,25.79,19.44])
 
@@ -38,6 +22,7 @@ print(list(total_cost))
 plt.figure(figsize=(10,5))
 plt.plot(time,water_cost,'-', linewidth=2, markersize=10,label='Water')
 plt.plot(time,sewer_cost,'-', linewidth=2, markersize=10,label='Sewer')
+plt.plot(time,total_cost,'-', linewidth=2, markersize=10,label='Total Cost')
 plt.xlabel('Months')
 plt.ylabel('Price ($)')
 plt.title('Water/Sewer Costs')
